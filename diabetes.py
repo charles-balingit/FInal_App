@@ -1,9 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from keras.models import load_model  # Import load_model from Keras
 
-@st.cache_resource
 def load_model():
     return tf.keras.models.load_model('diabetes_model.h5')
 # Load the model
