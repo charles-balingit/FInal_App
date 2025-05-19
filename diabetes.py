@@ -27,7 +27,7 @@ if st.button("Check Diabetes Risk"):
     prediction = model.predict(input_data)
     
     # Assuming the model outputs probabilities, convert to binary
-    predicted_class = (prediction[0][0] > 0.5).astype(int)  # Adjust threshold as needed
+    predicted_class = int(prediction[0][0] > 0.5)  # Adjust threshold as needed
     # Display results based on prediction
     if predicted_class == 1:
         st.error("🚨 You are likely to have diabetes. Please consult a healthcare professional.")
