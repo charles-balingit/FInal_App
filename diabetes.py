@@ -1,11 +1,9 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
+import joblit
 
-def load_model():
-    return tf.keras.models.load_model('diabetes_model.h5')
-# Load the model
-model = load_model()  
+model = joblit('diabetes_model.h5)  
 
 # Set up the Streamlit app
 st.set_page_config(page_title="Diabetes Classification", layout="centered")
