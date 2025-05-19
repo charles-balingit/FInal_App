@@ -22,7 +22,6 @@ if st.button("Check Diabetes Risk"):
     input_data = np.array([[pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, diabetes_pedigree, age]])
 
     prediction = model.predict(input_data)
-    st.write("Prediction shape:", prediction.shape)
 
     if prediction.ndim == 1: 
         predicted_class = int(prediction[0] > 0.5)
