@@ -6,7 +6,7 @@ import joblib
 # Load the model (ensure the correct method is used based on how the model was saved)
 # If the model was saved using joblib, keep this line; otherwise, use the TensorFlow method.
 # model = joblib.load('diabetes_model.h5')  
-model = tf.keras.models.load_model('diabetes_model.h5')  # Use this if it's a Keras model
+model = joblib.load('diabetes_model.h5')  # Use this if it's a Keras model
 
 # Set up the Streamlit app
 st.set_page_config(page_title="Diabetes Classification", layout="centered")
