@@ -7,7 +7,7 @@ model = joblib.load('diabetes_model.h5')
 
 st.set_page_config(page_title="Diabetes Classification", layout="centered")
 st.title("Diabetes Classification App")
-st.write("Enter your medical data to check if you are likely to have diabetes.")
+st.write("Please enter your medical data.")
 
 pregnancies = st.number_input("Number of Pregnancies", min_value=0, max_value=20, value=0)
 glucose = st.number_input("Glucose Level", min_value=0, max_value=200, value=100)
@@ -18,7 +18,7 @@ bmi = st.number_input("Body Mass Index (BMI)", min_value=0.0, max_value=50.0, va
 diabetes_pedigree = st.number_input("Diabetes Pedigree Function", min_value=0.0, max_value=2.5, value=0.5)
 age = st.number_input("Age (years)", min_value=0, max_value=120, value=30)
 
-if st.button("Check Diabetes Risk"):
+if st.button("Check Result"):
     input_data = np.array([[pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, diabetes_pedigree, age]])
 
     prediction = model.predict(input_data)
