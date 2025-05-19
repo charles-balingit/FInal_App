@@ -1,9 +1,9 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
-import joblit
+import joblib
 
-model = joblit('diabetes_model.h5')  
+model = joblib('diabetes_model.h5')  
 
 # Set up the Streamlit app
 st.set_page_config(page_title="Diabetes Classification", layout="centered")
