@@ -1,9 +1,8 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import joblib
 
-model = joblib.load('diabetes_model.h5')  
+model = load_model('diabetes_model.h5')  
 
 st.set_page_config(page_title="Diabetes Classification", layout="centered")
 st.title("Diabetes Classification App")
