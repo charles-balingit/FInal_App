@@ -2,6 +2,7 @@ streamlit
 pandas
 numpy
 tensorflow
+pillow
 joblib
 scikit-learn
 h5py
